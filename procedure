@@ -1,0 +1,6 @@
+CREATE or REPLACE PROCEDURE name(parameters)
+IS
+variables;
+BEGIN
+//statements;
+END;
