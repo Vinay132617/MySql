@@ -4,3 +4,23 @@ variables;
 BEGIN
 //statements;
 END;
+
+
+--example
+
+DELIMITER &&  
+CREATE PROCEDURE get_merit_student ()  
+BEGIN  
+    SELECT * FROM student_info WHERE marks > 70;  
+    SELECT COUNT(stud_code) AS Total_Student FROM student_info;    
+END &&  
+DELIMITER ;
+
+--exm 2
+DELIMITER &&  
+CREATE PROCEDURE get_student (IN var1 INT)  
+BEGIN  
+    SELECT * FROM student_info LIMIT var1;  
+    SELECT COUNT(stud_code) AS Total_Student FROM student_info;    
+END &&  
+DELIMITER ; 
